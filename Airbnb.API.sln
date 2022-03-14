@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airbnb.DAL", "Airbnb.DAL\Ai
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airbnb.Models", "Airbnb.Models\Airbnb.Models.csproj", "{82832FFE-8A05-4C3B-9852-2D67601AA123}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airbnb.Contracts", "Airbnb.Contracts\Airbnb.Contracts.csproj", "{6B07B63C-5687-4F73-9A87-2BCFAEBFB603}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{82832FFE-8A05-4C3B-9852-2D67601AA123}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82832FFE-8A05-4C3B-9852-2D67601AA123}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82832FFE-8A05-4C3B-9852-2D67601AA123}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B07B63C-5687-4F73-9A87-2BCFAEBFB603}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B07B63C-5687-4F73-9A87-2BCFAEBFB603}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B07B63C-5687-4F73-9A87-2BCFAEBFB603}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B07B63C-5687-4F73-9A87-2BCFAEBFB603}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
