@@ -6,10 +6,10 @@ public class Room
 {
     public Guid Id { get; set; }
     [Required]
-    [MaxLength(70)]
-    public string? Name { get; set; }
+    [MaxLength(150)]
+    public string? HomeType { get; set; }
     [Required]
-    [MaxLength(95)]
+    [MaxLength(150)]
     public string? Address { get; set; }
     [Required]
     public bool HasInternet { get; set; }
