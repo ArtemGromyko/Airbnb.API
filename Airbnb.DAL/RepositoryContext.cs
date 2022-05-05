@@ -1,5 +1,5 @@
 ﻿using Airbnb.DAL.Configuration;
-using Airbnb.DAL.Entities;
+using Airbnb.DomainModel.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Airbnb.DAL;
@@ -7,7 +7,6 @@ namespace Airbnb.DAL;
 public class RepositoryContext : DbContext
 {
     public DbSet<Reservation>? Reservations { get; set; }
-    public DbSet<Review>? Reviews { get; set; }
     public DbSet<Room>? Rooms { get; set; }
     public DbSet<User>? Users { get; set; }
 
@@ -21,6 +20,5 @@ public class RepositoryContext : DbContext
         modelBuilder.ApplyConfiguration(new UserConfiguration());
         modelBuilder.ApplyConfiguration(new RoomConfiguration());
         modelBuilder.ApplyConfiguration(new ReservationConfiguration());
-        modelBuilder.ApplyConfiguration(new ReviewConfiguration());
     }
 }

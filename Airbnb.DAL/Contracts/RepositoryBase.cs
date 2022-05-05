@@ -1,5 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Airbnb.DAL.Contracts;
+﻿using Airbnb.DAL.Contracts;
+using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace Airbnb.DAL.Repositories
 {
@@ -14,7 +15,7 @@ namespace Airbnb.DAL.Repositories
 
         public IQueryable<T> FindAll() => repositoryContext.Set<T>().AsNoTracking();
 
-        public IQueryable<T> FindByCondition(System.Linq.Expressions.Expression<Func<T, bool>> expression) =>
+        public IQueryable<T> FindByCondition(Expression<Func<T, bool>> expression) =>
             repositoryContext.Set<T>().Where(expression).AsNoTracking();
 
         public async Task CreateAsync(T entity)
