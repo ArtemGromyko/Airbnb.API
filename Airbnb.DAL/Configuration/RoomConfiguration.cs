@@ -8,6 +8,9 @@ internal class RoomConfiguration : IEntityTypeConfiguration<Room>
 {
     public void Configure(EntityTypeBuilder<Room> builder)
     {
+        builder.Property(r => r.Address).HasMaxLength(150);
+        builder.Property(r => r.Price).HasColumnType("money");
+
         builder.HasData
         (
             new Room

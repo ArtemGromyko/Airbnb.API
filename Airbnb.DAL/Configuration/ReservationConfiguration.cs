@@ -8,6 +8,10 @@ internal class ReservationConfiguration : IEntityTypeConfiguration<Reservation>
 {
     public void Configure(EntityTypeBuilder<Reservation> builder)
     {
+        builder.Property(r => r.StartDate).HasColumnType("date");
+        builder.Property(r => r.EndDate).HasColumnType("date");
+        builder.HasOne(r => r.User).WithMany(u => u.Reservations).OnDelete(DeleteBehavior.ClientCascade);
+
         builder.HasData
         (
             new Reservation
