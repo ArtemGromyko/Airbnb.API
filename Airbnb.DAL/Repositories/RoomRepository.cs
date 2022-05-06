@@ -21,4 +21,7 @@ public class RoomRepository : RepositoryBase<Room>, IRoomRepository
 
     public async Task DeleteRoomAsync(Room room) =>
         await DeleteAsync(room);
+
+    public async Task<List<Room>?> GetUserRoomsByIdAsync(Guid userId) =>
+        await FindByCondition(r => r.OwnerId.Equals(userId)).ToListAsync();
 }

@@ -8,6 +8,8 @@ var services = builder.Services;
 // Add services to the container.
 services.ConfigureSqlContext(configuration);
 services.AddControllers();
+services.ConfigureRepositories();
+services.ConfigureServices();
 services.AddEndpointsApiExplorer();
 services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 services.AddSwaggerGen();
